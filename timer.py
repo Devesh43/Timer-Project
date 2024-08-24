@@ -25,7 +25,6 @@ def timer(seconds):
             print(f"{CLEAR_AND_RETURN}Timer will end in : {minutes_left:02d}:{seconds_left:02d}", end="\r")
         
         if time_left == 5:
-            # Start playing the sound in a separate thread when 5 seconds are left
             sound_thread = threading.Thread(target=play_sound)
             sound_thread.start()
 
