@@ -34,8 +34,8 @@ def timer(seconds):
     
     if sound_thread and sound_thread.is_alive():
         sound_thread.join(timeout=6)
+    
     else:
-        
         sound_thread = threading.Thread(target=play_sound)
         sound_thread.start()
         time.sleep(6)
